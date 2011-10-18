@@ -1,0 +1,6 @@
+Manifest-Version: 1.0
+Implementation-Title: YellowBot API Client
+Implementation-Version: 0.1.0
+Specification-Title: YellowBot API Client
+Specification-Version: 0.1.0
+

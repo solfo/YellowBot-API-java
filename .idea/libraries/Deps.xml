@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="Deps">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/httpclient-4.1.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/httpcore-4.1.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jackson-mapper-asl-1.9.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jackson-core-asl-1.9.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/commons-logging-1.1.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/commons-codec-1.4.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
