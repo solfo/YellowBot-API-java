@@ -1,0 +1,6 @@
+YellowBot API Java Client
+Copyright 2011 Solfo Inc, all rights reserved.
+
+This product includes software developed by
+Solfo Inc. (http://www.solfo.com/).
+
