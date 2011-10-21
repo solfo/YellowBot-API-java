@@ -152,7 +152,7 @@
   
   <path id="yellowbot-api.module.sourcepath">
     <dirset dir="${module.yellowbot-api.basedir}">
-      <include name="src"/>
+      <include name="src/main"/>
     </dirset>
   </path>
   
@@ -176,7 +176,7 @@
     </javac>
     
     <copy todir="${yellowbot-api.output.dir}">
-      <fileset dir="${module.yellowbot-api.basedir}/src">
+      <fileset dir="${module.yellowbot-api.basedir}/src/main">
         <patternset refid="compiler.resources"/>
         <type type="file"/>
       </fileset>
@@ -243,7 +243,7 @@
 
   <!-- TODO: make this more standard -->
   <target name="build.dist" depends="artifact.yellowbot-api" description="Build dist">
-      <property name="yellowbot-api.version" value="0.1.0"/>
+      <property name="yellowbot-api.version" value="0.1.1"/>
       <property name="artifacts.dist.dir" value="${basedir}/out/dist/yellowbot-api-${yellowbot-api.version}" />
       <property name="artifacts.dist.file" value="${basedir}/out/dist/yellowbot-api-${yellowbot-api.version}.zip" />
       <property name="artifacts.dist.jar" value="${artifacts.dist.dir}/lib/yellowbot-api-${yellowbot-api.version}.jar"/>
@@ -264,7 +264,7 @@
 
       <javadoc destdir="${artifacts.dist.dir}/javadoc" >
 
-          <packageset dir="${basedir}/src">
+          <packageset dir="${basedir}/src/main">
               <include name="com/yellowbot/api/**"/>
           </packageset>
           <link offline="true" href="http://download.oracle.com/javase/6/docs/api/" packagelistLoc="${jdk.docs.1.6}/api"/>
