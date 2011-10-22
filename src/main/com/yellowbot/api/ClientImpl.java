@@ -247,22 +247,7 @@ public class ClientImpl implements Client {
         }
 
         // build query
-        List<NameValuePair> qparams = new ArrayList<NameValuePair>();
-        Set<Map.Entry> pairs = params.entrySet();
-        for (Map.Entry e : pairs) {
-            qparams.add(new BasicNameValuePair(e.getKey().toString(), e.getValue().toString()));
-
-        }
-        // api_key
-        qparams.add(new BasicNameValuePair("api_key", apiKey));
-
-        // api_ts
-        qparams.add(new BasicNameValuePair("api_ts", ""+Utils.theTime()));
-
-        // api_sig
-        qparams.add(new BasicNameValuePair("api_sig", buildHash(qparams)));
-
-        String query = URLEncodedUtils.format(qparams, "UTF-8");
+        String query = buildRequestQuery(params);
 
         String apiPath = API_PATH_ROOT + endPoint;
 
@@ -274,7 +259,38 @@ public class ClientImpl implements Client {
         return httpGet;
     }
 
+    private String buildRequestQuery(Map params){
+        List<NameValuePair> qparams = new ArrayList<NameValuePair>();
+        Set<Map.Entry> pairs = params.entrySet();
+        for (Map.Entry e : pairs) {
+            qparams.add(new BasicNameValuePair(e.getKey().toString(), e.getValue().toString()));
+
+        }
+        // api_key
+        qparams.add(new BasicNameValuePair("api_key", apiKey));
+
+        // api_ts
+        if (!params.containsKey("api_ts")) { // better know what you're doing
+            qparams.add(new BasicNameValuePair("api_ts", ""+Utils.theTime()));
+        }
+
+        // api_sig
+        qparams.add(new BasicNameValuePair("api_sig", buildHash(qparams)));
+
+        return URLEncodedUtils.format(qparams, "UTF-8");
+    }
+
     public String buildSigninUrl(Map params) {
-        throw new RuntimeException("Not implemented yet");
+        // build query
+        String query = buildRequestQuery(params);
+
+        URI uri;
+        try {
+            uri = URIUtils.createURI("http", apiServer, -1, "signin/partner", query, null);
+        } catch (URISyntaxException e) {
+            throw new InternalException(e); // Can't build URI? humpf
+        }
+
+        return uri.toString();
     }
 }

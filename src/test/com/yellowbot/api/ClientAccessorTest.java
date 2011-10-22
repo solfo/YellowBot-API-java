@@ -4,11 +4,15 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 /**
+ * * <p>
+ * Copyright 2011 Solfo Inc, all rights reserved.
+ * </p>
+ *
+ * <p/>
+ * <!--
  * Created by IntelliJ IDEA.
- * User: ferreira
- * Date: 10/21/11
- * Time: 10:12 PM
- * To change this template use File | Settings | File Templates.
+ * Date: 10/21/11 10:12 PM
+ * -->
  */
 public class ClientAccessorTest {
     @Test
