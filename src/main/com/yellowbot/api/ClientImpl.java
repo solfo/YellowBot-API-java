@@ -51,6 +51,11 @@ import java.util.TreeSet;
 public class ClientImpl implements Client {
 
     /**
+     * The API version in use.
+     */
+    private int apiVersion = 2;
+
+    /**
      * The API server in use.
      */
     private String apiServer = "www.yellowbot.com";
@@ -116,6 +121,16 @@ public class ClientImpl implements Client {
             throw new IllegalArgumentException("Invalid parameter apiServer ("+apiServer+")");
         this.apiServer = apiServer;
     }
+
+    public int getApiVersion() {
+         return apiVersion;
+     }
+
+     public void setApiVersion(int apiVersion) {
+         if (apiVersion < 1)
+             throw new IllegalArgumentException("Invalid parameter apiVersion ("+apiVersion+")");
+         this.apiVersion = apiVersion;
+     }
 
     // other methods
 

@@ -7,9 +7,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8860a4c1-80b5-4a80-b5ca-9881e12efb75" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/com/yellowbot/api/UtilsTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/com/yellowbot/api/ClientAccessorTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/YellowBot-API.iml" afterPath="$PROJECT_DIR$/YellowBot-API.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/com/yellowbot/api/Client.java" afterPath="$PROJECT_DIR$/src/main/com/yellowbot/api/Client.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/com/yellowbot/api/ClientImpl.java" afterPath="$PROJECT_DIR$/src/main/com/yellowbot/api/ClientImpl.java" />
     </list>
     <ignored path="YellowBot-API.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -82,13 +83,51 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UtilsTest.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="UtilsTest.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/com/yellowbot/api/UtilsTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="108" selection-start="1480" selection-end="1480" vertical-scroll-proportion="0.7475083">
+            <state line="27" column="0" selection-start="816" selection-end="816" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Client.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/com/yellowbot/api/Client.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="148" column="78" selection-start="4514" selection-end="4514" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ClientImpl.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/com/yellowbot/api/ClientImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="129" column="25" selection-start="3267" selection-end="3267" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ClientAccessorTest.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/com/yellowbot/api/ClientAccessorTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="40" column="31" selection-start="1609" selection-end="1609" vertical-scroll-proportion="0.92524916">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="APIException.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/com/yellowbot/api/APIException.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="16" column="8" selection-start="417" selection-end="478" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -107,9 +146,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/com/yellowbot/api/ClientBuilder.java" />
-        <option value="$PROJECT_DIR$/src/com/yellowbot/api/example/TODO" />
-        <option value="$PROJECT_DIR$/src/com/yellowbot/api/example/ClientDemo.java" />
         <option value="$PROJECT_DIR$/META-INF/MANIFEST.MF" />
         <option value="$PROJECT_DIR$/src/com/yellowbot/api/InternalException.java" />
         <option value="$PROJECT_DIR$/.idea/libraries/Unnamed.xml" />
@@ -123,6 +159,9 @@
         <option value="$PROJECT_DIR$/src/com/yellowbot/api/Client.java" />
         <option value="$PROJECT_DIR$/yellowbot-api.xml" />
         <option value="$PROJECT_DIR$/src/test/com/yellowbot/api/UtilsTest.java" />
+        <option value="$PROJECT_DIR$/src/main/com/yellowbot/api/Client.java" />
+        <option value="$PROJECT_DIR$/src/main/com/yellowbot/api/ClientImpl.java" />
+        <option value="$PROJECT_DIR$/src/test/com/yellowbot/api/ClientAccessorTest.java" />
       </list>
     </option>
   </component>
@@ -251,7 +290,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
+              <option name="myItemId" value="test" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -269,11 +308,15 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="examples" />
+              <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="example" />
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="api" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -352,7 +395,7 @@
       <recent name="com.yellowbot.api" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.UtilsTest">
+  <component name="RunManager" selected="JUnit.ClientAccessorTest">
     <configuration default="false" name="ClientDemo" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="com.yellowbot.api.example.ClientDemo" />
       <option name="VM_PARAMETERS" value="" />
@@ -420,6 +463,28 @@
       <option name="PACKAGE_NAME" value="com.yellowbot.api" />
       <option name="MAIN_CLASS_NAME" value="com.yellowbot.api.UtilsTest" />
       <option name="METHOD_NAME" value="testCheckHost" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="ClientAccessorTest" type="JUnit" factoryName="JUnit" temporary="true">
+      <module name="YellowBot-API" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.yellowbot.api" />
+      <option name="MAIN_CLASS_NAME" value="com.yellowbot.api.ClientAccessorTest" />
+      <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" />
       <option name="PARAMETERS" />
@@ -541,11 +606,12 @@
         <option name="Maven.BeforeRunTask" enabled="false" />
       </method>
     </configuration>
-    <list size="4">
+    <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Application.ClientDemo" />
       <item index="1" class="java.lang.String" itemvalue="JUnit.All in YellowBot-API" />
       <item index="2" class="java.lang.String" itemvalue="JUnit.UtilsTest.testCheckHost" />
       <item index="3" class="java.lang.String" itemvalue="JUnit.UtilsTest" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.ClientAccessorTest" />
     </list>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
       <Host>localhost</Host>
@@ -608,6 +674,7 @@
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32905984" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32905984" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24906467" sideWeight="0.67094016" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32905984" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -621,7 +688,6 @@
       <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3258547" sideWeight="0.9993266" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32905984" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39957264" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -682,11 +748,6 @@
     </buildFile>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/META-INF/MANIFEST.MF">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="0" selection-start="22" selection-end="22" vertical-scroll-proportion="0.024958402" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.idea/copyright/profiles_settings.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
@@ -700,11 +761,6 @@
     <entry file="file://$PROJECT_DIR$/.idea/libraries/Deps.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/com/yellowbot/api/ClientImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="121" column="0" selection-start="3066" selection-end="3066" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/com/yellowbot/api/InternalException.java">
@@ -727,11 +783,6 @@
         <state line="2" column="8" selection-start="145" selection-end="145" vertical-scroll-proportion="0.050083473" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/com/yellowbot/api/APIException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="43" selection-start="599" selection-end="599" vertical-scroll-proportion="0.5759599" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/examples/com/yellowbot/api/example/ClientDemo.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="15" column="3" selection-start="293" selection-end="293" vertical-scroll-proportion="0.0" />
@@ -740,13 +791,6 @@
     <entry file="file://$PROJECT_DIR$/src/main/com/yellowbot/api/YellowBot.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="22" column="30" selection-start="357" selection-end="357" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/com/yellowbot/api/Client.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="136" column="16" selection-start="4125" selection-end="4125" vertical-scroll-proportion="0.4966443">
           <folding />
         </state>
       </provider>
@@ -765,9 +809,39 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/com/yellowbot/api/APIException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="8" selection-start="417" selection-end="478" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/com/yellowbot/api/UtilsTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="108" selection-start="1480" selection-end="1480" vertical-scroll-proportion="0.7475083">
+        <state line="27" column="0" selection-start="816" selection-end="816" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/com/yellowbot/api/Client.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="148" column="78" selection-start="4514" selection-end="4514" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/com/yellowbot/api/ClientImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="129" column="25" selection-start="3267" selection-end="3267" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/com/yellowbot/api/ClientAccessorTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="40" column="31" selection-start="1609" selection-end="1609" vertical-scroll-proportion="0.92524916">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

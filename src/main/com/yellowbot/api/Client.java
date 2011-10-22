@@ -137,6 +137,20 @@ public interface Client {
     void setApiServer(String apiServer);
 
     /**
+     * The API version in use.
+     * @return an integer identifying the API version in use
+     */
+    int getApiVersion();
+
+    /**
+     * Assigns an integer as the API version for this client.
+     *
+     * @param apiVersion an integer identifying the API version to be set
+     * @throws IllegalArgumentException If <code>apiVersion</code> is invalid.
+     */
+    void setApiVersion(int apiVersion);
+
+    /**
      * Makes an API call for the given API end point
      * with the given parameters.
      *
