@@ -45,8 +45,8 @@ public class ClientDemo {
 
         if ("US".equals(country)) {
             demoEcho(client);
-            //demoSearch(client);
-            //demoBadCall(client);
+            demoSearch(client);
+            demoBadCall(client);
         }
         if ("CA".equals(country)) { // meanwhile in Canada
             client.setApiServer("www.weblocal.ca");

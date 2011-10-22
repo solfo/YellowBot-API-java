@@ -240,7 +240,11 @@ public class ClientImpl implements Client {
     }
 
     private HttpUriRequest buildGetRequest(String endPoint, Map params) throws URISyntaxException {
-        String apiPath = API_PATH_ROOT + endPoint;
+
+        // handle api_version
+        if (!params.containsKey("api_version")) {
+            params.put("api_version", getApiVersion());
+        }
 
         // build query
         List<NameValuePair> qparams = new ArrayList<NameValuePair>();
@@ -259,6 +263,8 @@ public class ClientImpl implements Client {
         qparams.add(new BasicNameValuePair("api_sig", buildHash(qparams)));
 
         String query = URLEncodedUtils.format(qparams, "UTF-8");
+
+        String apiPath = API_PATH_ROOT + endPoint;
 
         URI uri = URIUtils.createURI("http", apiServer, -1, apiPath, query, null);
         HttpGet httpGet = new HttpGet(uri);
